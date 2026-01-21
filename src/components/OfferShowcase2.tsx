@@ -56,7 +56,6 @@ function DistortedImage({ imageUrl, mousePos, isActive, dimension }: ModelProps)
   useEffect(() => {
     animate(opacity, isActive ? 1 : 0, {
       duration: 0.15,
-      ease: 'easeOut',
       onUpdate: (latest) => {
         if (mesh.current?.material) {
           mesh.current.material.uniforms.uAlpha.value = latest;
